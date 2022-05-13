@@ -57,3 +57,4 @@ for i in inp:
     c.add(nice_item_input(i))
     slot += 1
 c.save_collection()
+input("Нажмите RETURN, чтобы завершить...")
