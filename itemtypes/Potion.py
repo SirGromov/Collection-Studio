@@ -90,7 +90,7 @@ class Potion:
             self.itype = self.itype.split()[0]
         else:
             self.var = '0'
-        self.pattern = 'Generic'
+        self.pattern = 'Potion'
         self.amount = amount
         self.meta = [i.lower() for i in meta]
         self.effect_parser()
@@ -101,7 +101,6 @@ class Potion:
             self.hidden += 1
         self.nbt = '{display:{Name:"' + self.name + '",Lore:[' + self.lore_array + ']},ench:' + self.ench_list_nbt + \
                    ',AttributeModifiers:['+self.attribute_nbt_list+']'+',HideFlags:'+str(self.hidden)+self.effect_list_nbt+'}'
-        print(self.nbt)
         self.give_command = f'/give @p minecraft:{self.itype} {self.amount} {self.var} ' + self.nbt
 
     def attribute_parser(self):
