@@ -1,4 +1,4 @@
-# Collection-Studio
+# Collection Studio for Mineland
 Создание give-команд по определенному шаблону
 
 Пример перевода текста в /give-команду показан в файле input.txt.
