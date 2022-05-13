@@ -7,7 +7,7 @@ class Collection:
         self.items_list = []
 
     def add(self, item: Item):
-        print(item.name, item.pattern)
+        print(item.name, item.pattern, 'OK')
         self.items_list.append(item)
 
     def get_chest_nbt(self):
@@ -52,14 +52,6 @@ class Collection:
         self.give_command = res
 
     def save_collection(self):
-        self.get_chest_nbt()
-        print(self.give_common)
-        print(self.give_uncommon)
-        print(self.give_epic)
-        print(self.give_exotic)
-        print(self.give_legendary)
-        print(self.give_forbidden)
-        print(self.give_command)
         with open('output/master.txt', 'w', encoding='utf-8') as f:
             f.write(self.give_command)
             f.close()
@@ -81,3 +73,4 @@ class Collection:
         with open('output/forbidden.txt', 'w', encoding='utf-8') as f:
             f.write(self.give_forbidden)
             f.close()
+        print('Команды собраны и записаны в файлы успешно!')
